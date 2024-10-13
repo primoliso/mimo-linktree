@@ -1,4 +1,4 @@
-img {
+.profilepicture {
     width: 300px;
     border-radius: 50%;
     animation: bounce 2s infinite;
@@ -35,6 +35,15 @@ a:hover {
     color: rgb(255, 255, 255);
     background-color: slateblue;
     transform: scale(1.05);
+}
+
+a img {
+    height: 1em;
+    /* Define a altura da imagem igual à altura do texto */
+    width: auto;
+    /* Mantém a proporção da largura */
+    vertical-align: middle;
+    /* Alinha a imagem verticalmente com o texto */
 }
 
 @keyframes bounce {
