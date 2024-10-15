@@ -43,7 +43,8 @@ body {
 .content-wrapper {
     background: rgba(255, 255, 255, 0.253);
     /* Fundo semi-transparente */
-    padding: 20px;
+    padding: 30px;
+    padding-top: 50px;
     border-radius: 40px;
     /* Arredonda os cantos do bloco */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.404);
@@ -54,6 +55,12 @@ body {
     margin: 20px;
     text-align: center;
     /* Centraliza o texto */
+}
+
+@media (max-width: 600px) {
+    .content-wrapper {
+        padding-top: 100px; /* Mais espaço no topo em telas pequenas */
+    }
 }
 
 /* Estilo dos títulos principais */
@@ -88,7 +95,7 @@ p {
     /* Arredonda a imagem para formar um círculo */
     animation: bounce 2s infinite;
     /* Aplica animação de "pulo" */
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 /* Estilo dos links */
