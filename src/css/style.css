@@ -21,7 +21,7 @@ body {
     font-family: 'Trebuchet MS';
     text-align: center;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     /* Impede que o conteúdo transborde para fora da tela */
 }
 
