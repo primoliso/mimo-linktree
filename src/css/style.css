@@ -1,42 +1,139 @@
-.profilepicture {
-    width: 300px;
-    border-radius: 50%;
-    animation: bounce 2s infinite;
-    margin-top: 20px;
+/* Aplica o modelo de box-sizing, que facilita o controle do tamanho dos elementos */
+* {
+    box-sizing: border-box;
+}
 
+/* Define que o body e html ocupem 100% da altura da página */
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Centraliza o conteúdo no meio da tela com Flexbox e define o background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, slateblue, lightblue);
+    /* Gradiente no fundo */
+    color: white;
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Impede que o conteúdo transborde para fora da tela */
+}
+
+/* Configuração do fundo desfocado */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/Plano\ de\ fundo\ 2.0.webp') no-repeat center center/cover;
+    filter: blur(8px);
+    /* Aplica desfoque no fundo */
+    z-index: -1;
+    /* Garante que o fundo fique atrás do conteúdo */
+}
+
+/* Estilos da div que envolve todo o conteúdo */
+.content-wrapper {
+    background: rgba(255, 255, 255, 0.253);
+    /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 40px;
+    /* Arredonda os cantos do bloco */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.404);
+    /* Aplica sombra ao bloco */
+    max-width: 800px;
+    width: 100%;
+    /* Faz o bloco ser responsivo */
+    margin: 20px;
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+/* Estilo dos títulos principais */
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    /* Cor escura para o título */
+    font-weight: 900;
 }
 
 h2 {
     font-size: 24px;
+    color: #5e5e5e;
+    /* Cor mais suave para o subtítulo */
+    font-weight: 900;
 }
 
-body {
-    background: linear-gradient(to right, slateblue, lightblue);
-    color: white;
-    font-family: 'Trebuchet MS';
-    text-align: center;
+/* Estilo dos parágrafos */
+p {
+    color: #5e5e5e;
+    /* Cor semelhante ao subtítulo */
+    font-weight: 900;
+    /* Deixa o texto mais destacado */
+    font-size: 20px;
 }
 
+/* Estilo da imagem de perfil */
+.profilepicture {
+    width: 260px;
+    /* Define o tamanho da imagem de perfil */
+    border-radius: 50%;
+    /* Arredonda a imagem para formar um círculo */
+    animation: bounce 2s infinite;
+    /* Aplica animação de "pulo" */
+    margin-top: 20px;
+}
+
+/* Estilo dos links */
 a {
-    background-color: white;
+    background-color: rgba(192, 252, 227, 0.5);
+    /* Fundo semi-transparente dos links */
     font-size: 20px;
     border-radius: 10px;
-    padding: 10px 20px 10px 20px;
+    /* Arredonda os cantos dos links */
+    padding: 10px 20px;
     display: inline-block;
+    /* Exibe os links como blocos inline */
     text-align: center;
-    margin: 10px 10px 10px 10px;
-    color: slateblue;
+    margin: 10px;
+    color: rgb(72, 163, 148);
+    /* Cor do texto dos links */
     text-decoration: none;
+    /* Remove o sublinhado dos links */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Aplica sombra nos links */
     transition: transform 0.5s ease;
+    /* Transição suave quando o link é clicado */
 }
 
-a:hover {
-    color: rgb(255, 255, 255);
-    background-color: slateblue;
-    transform: scale(1.05);
+/* Efeito hover nos links de redes sociais */
+a.linksredes:hover {
+    color: rgb(72, 163, 148);
+    /* Cor ao passar o mouse */
+    background-color: rgba(229, 255, 0, 0.5);
+    /* Muda a cor do fundo no hover */
+    transform: scale(1.5);
+    /* Aumenta o tamanho no hover */
 }
 
+/* Efeito hover nos links de portfólio */
+a.linksportifolios:hover {
+    color: rgb(72, 163, 148);
+    /* Cor ao passar o mouse */
+    background-color: rgba(229, 255, 0, 0.5);
+    /* Muda a cor do fundo no hover */
+    transform: scale(1.06);
+    /* Aumenta ligeiramente no hover */
+}
+
+/* Estilo para as imagens nos links */
 a img {
     height: 1em;
     /* Define a altura da imagem igual à altura do texto */
@@ -46,6 +143,7 @@ a img {
     /* Alinha a imagem verticalmente com o texto */
 }
 
+/* Animação de "pulo" para a imagem de perfil */
 @keyframes bounce {
 
     0%,
